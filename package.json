@@ -1,0 +1,31 @@
+{
+  "name": "shaguar",
+  "version": "1.0.0",
+  "description": "Socket Presence Room",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/CredPago/cp-shaguar.git"
+  },
+  "keywords": [],
+  "author": "CredPago",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/CredPago/cp-shaguar/issues"
+  },
+  "homepage": "https://gitlab.com/CredPago/cp-shaguar#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "pino": "^6.2.0",
+    "pino-pretty": "^4.0.0",
+    "randomcolor": "^0.5.4",
+    "redis": "^3.0.2",
+    "socket.io": "^2.3.0"
+  }
+}

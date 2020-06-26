@@ -1,22 +1,10 @@
- 
-const express = require('express');
 const logger = require('pino')();
-const app = express();
-
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
-  const path = require('path');
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
-}
-
 const log = logger.child({ level: process.env.LOG_LEVEL || 'info', prettyPrint: true });
-
-const io = require("socket.io").listen(process.env.REACT_APP_SOCKET_PORT);
 
 const users = {};
 const socketToRoom = {};
+
+const io = require("socket.io").listen(process.env.REACT_APP_SOCKET_PORT);
 
 io.on('connection', socket => {
 

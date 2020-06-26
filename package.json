@@ -21,10 +21,7 @@
   },
   "scripts": {
     "dev": "nodemon index.js",
-    "server": "node index.js",
-    "start": "node index.js",
-    "build": "npm run build",
-    "heroku-postbuild": "npm run build"
+    "start": "node index.js"
   },
   "engines": {
     "node": "10.20.1"

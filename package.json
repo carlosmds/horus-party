@@ -1,31 +1,54 @@
 {
-  "name": "shaguar",
-  "version": "1.0.0",
-  "description": "Socket Presence Room",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "horus_party",
+  "version": "0.1.0",
+  "private": true,
+  "builds": {
+    "src": "index.js",
+    "use": "@now/node-server",
+    "config": {
+      "maxLambdaSize": "50mb"
+    }
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://gitlab.com/CredPago/cp-shaguar.git"
-  },
-  "keywords": [],
-  "author": "CredPago",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/CredPago/cp-shaguar/issues"
-  },
-  "homepage": "https://gitlab.com/CredPago/cp-shaguar#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "fs": "0.0.1-security",
-    "pino": "^6.2.0",
-    "pino-pretty": "^4.0.0",
-    "randomcolor": "^0.5.4",
+    "heroku": "^7.42.1",
+    "http-proxy-middleware": "^1.0.4",
+    "pino": "^6.3.2",
     "redis": "^3.0.2",
+    "serve": "^11.3.2",
     "socket.io": "^2.3.0"
+  },
+  "scripts": {
+    "dev": "nodemon index.js",
+    "server": "node index.js",
+    "start": "node index.js",
+    "build": "npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "engines": {
+    "node": "10.20.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "express-pino-logger": "^5.0.0",
+    "node-env-run": "^3.0.2",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "pino-colada": "^1.6.1"
   }
 }

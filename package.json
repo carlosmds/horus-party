@@ -8,7 +8,7 @@
     "http-proxy-middleware": "^1.0.4",
     "pino": "^6.3.2",
     "redis": "^3.1.1",
-    "serve": "^11.3.2",
+    "serve": "^13.0.2",
     "socket.io": "^2.4.0"
   },
   "scripts": {
@@ -16,11 +16,11 @@
     "start": "node index.js"
   },
   "engines": {
-    "node": "10.20.1"
+    "node": "v16.13.2"
   },
   "devDependencies": {
     "express-pino-logger": "^5.0.0",
-    "node-env-run": "^3.0.2",
+    "node-env-run": "^4.0.2",
     "nodemon": "^2.0.4",
     "npm-run-all": "^4.1.5",
     "pino-colada": "^1.6.1"

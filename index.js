@@ -1,8 +1,10 @@
+require('dotenv').config()
+
 const logger = require('pino')();
 const app = require('express');
 const server = require('http').createServer(app);// for localhost
 
-const log = logger.child({ level: process.env.LOG_LEVEL || 'info', prettyPrint: true });
+const log = logger.child({ prettyPrint: true });
 
 const users = {};
 const socketToRoom = {};
@@ -56,7 +58,7 @@ io.on('connection', socket => {
 });
 
 server.listen(process.env.PORT, () => {
-  console.log('Running on port', process.env.PORT);
+  log.info('Running on port '+process.env.PORT);
 });
 
 // const redis = require('redis');
